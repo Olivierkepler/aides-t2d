@@ -38,11 +38,7 @@ const Footer = () => {
             
             <div className="relative z-10">
               {/* Logo */}
-              <div className="flex-shrink-0 mb-8 flex items-center gap-2 cursor-pointer">
-                <div className="bg-gradient-to-tr from-blue-600 to-cyan-500 text-white p-1.5 rounded-lg">
-                  <Mic size={20} fill="currentColor" />
-                </div>
-              </div>
+              
               <h2 className="text-4xl font-bold text-gray-900 tracking-tight mb-4">
                 Ready to upgrade your workflow?
               </h2>
