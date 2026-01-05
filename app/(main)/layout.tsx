@@ -12,7 +12,7 @@ export default function AuthLayout({
 }) {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans antialiased">
-   
+     
       <main className="w-full h-full min-h-screen">
         {children}
       </main>

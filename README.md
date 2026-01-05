@@ -34,3 +34,133 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+stampley-app/
+├─ app/
+│  ├─ (public)/
+│  │  ├─ login/
+│  │  │  └─ page.tsx
+│  │  ├─ forgot-password/
+│  │  │  └─ page.tsx
+│  │  ├─ reset-password/
+│  │  │  └─ page.tsx
+│  │  └─ layout.tsx
+│  │
+│  ├─ (participant)/
+│  │  ├─ dashboard/
+│  │  │  └─ page.tsx
+│  │  ├─ check-in/
+│  │  │  ├─ today/
+│  │  │  │  └─ page.tsx
+│  │  │  ├─ history/
+│  │  │  │  └─ page.tsx
+│  │  │  └─ layout.tsx
+│  │  ├─ progress/
+│  │  │  └─ page.tsx
+│  │  ├─ tips/
+│  │  │  └─ page.tsx
+│  │  ├─ settings/
+│  │  │  └─ page.tsx
+│  │  └─ layout.tsx
+│  │
+│  ├─ (admin)/
+│  │  ├─ admin/
+│  │  │  ├─ page.tsx
+│  │  │  ├─ participants/
+│  │  │  │  ├─ page.tsx
+│  │  │  │  └─ [id]/
+│  │  │  │     └─ page.tsx
+│  │  │  ├─ enrollment/
+│  │  │  │  └─ page.tsx
+│  │  │  ├─ content/
+│  │  │  │  └─ page.tsx
+│  │  │  ├─ reports/
+│  │  │  │  └─ page.tsx
+│  │  │  └─ layout.tsx
+│  │  └─ layout.tsx
+│  │
+│  ├─ api/
+│  │  ├─ auth/
+│  │  │  ├─ login/
+│  │  │  │  └─ route.ts
+│  │  │  ├─ logout/
+│  │  │  │  └─ route.ts
+│  │  │  ├─ forgot-password/
+│  │  │  │  └─ route.ts
+│  │  │  └─ reset-password/
+│  │  │     └─ route.ts
+│  │  │
+│  │  ├─ participant/
+│  │  │  ├─ dashboard/
+│  │  │  │  └─ route.ts
+│  │  │  ├─ weekly-focus/
+│  │  │  │  └─ route.ts
+│  │  │  ├─ progress/
+│  │  │  │  └─ route.ts
+│  │  │  └─ tips/
+│  │  │     └─ route.ts
+│  │  │
+│  │  ├─ checkins/
+│  │  │  ├─ create/
+│  │  │  │  └─ route.ts
+│  │  │  ├─ today/
+│  │  │  │  └─ route.ts
+│  │  │  └─ history/
+│  │  │     └─ route.ts
+│  │  │
+│  │  └─ admin/
+│  │     ├─ participants/
+│  │     │  └─ route.ts
+│  │     ├─ participants/
+│  │     │  └─ [id]/
+│  │     │     └─ route.ts
+│  │     ├─ enrollment/
+│  │     │  └─ route.ts
+│  │     ├─ content/
+│  │     │  └─ route.ts
+│  │     └─ reports/
+│  │        └─ route.ts
+│  │
+│  ├─ layout.tsx
+│  ├─ page.tsx
+│  ├─ not-found.tsx
+│  └─ error.tsx
+│
+├─ components/
+│  ├─ ui/
+│  ├─ auth/
+│  ├─ dashboard/
+│  ├─ checkin/
+│  ├─ admin/
+│  └─ shared/
+│
+├─ lib/
+│  ├─ auth/
+│  ├─ db/
+│  ├─ services/
+│  ├─ validators/
+│  └─ utils/
+│
+├─ types/
+│  ├─ auth.ts
+│  ├─ participant.ts
+│  ├─ checkin.ts
+│  └─ admin.ts
+│
+├─ public/
+│  ├─ images/
+│  └─ icons/
+│
+├─ styles/
+│  └─ globals.css   (or use app/globals.css)
+│
+├─ prisma/          (if using Prisma)
+│  ├─ schema.prisma
+│  └─ migrations/
+│
+├─ middleware.ts    (optional)
+├─ .env.local
+├─ next.config.js
+├─ tsconfig.json
+└─ package.json
+
