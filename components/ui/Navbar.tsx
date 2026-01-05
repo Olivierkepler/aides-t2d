@@ -298,7 +298,7 @@ const Navbar: React.FC = () => {
           
           {/* Mobile Footer */}
           <div className="p-6 border-t border-slate-100 flex-none bg-slate-50/50">
-            <p className="text-xs text-slate-400 text-center">© 2024 EchoPilot Inc.</p>
+            <p className="text-xs text-slate-400 text-center">© 2026 EchoPilot</p>
           </div>
         </div>
       </div>
