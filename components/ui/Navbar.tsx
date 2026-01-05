@@ -127,8 +127,8 @@ const Navbar: React.FC = () => {
                 >
                   <button 
                     className={`
-                      px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 flex items-center gap-1
-                      ${hoveredDesktopItem === item.label ? 'text-slate-900 bg-slate-50' : 'text-slate-500 hover:text-slate-900'}
+                      px-4 py-2 text-sm font-medium rounded-full cursor-pointer transition-all duration-200 flex items-center gap-1
+                      ${hoveredDesktopItem === item.label ? 'text-slate-900 bg-slate-50' : 'text-slate-900 hover:text-slate-900'}
                     `}
                   >
                     {item.label}
@@ -171,9 +171,11 @@ const Navbar: React.FC = () => {
 
             {/* --- Desktop CTA --- */}
             <div className="hidden md:flex items-center space-x-4">
-              <button className="text-sm font-medium text-slate-600 hover:text-slate-900 px-2">
+              <Link href="/login" className="text-sm bg-slate-900 hover:bg-slate-50 hover:text-slate-900 rounded-full cursor-pointer px-4 py-2 font-medium  hover:text-slate-900 px-2">
                 Log in
-              </button>
+              </Link>
+
+              
               <button className="
                 bg-slate-900 hover:bg-black text-white 
                 px-5 py-2.5 rounded-full 
