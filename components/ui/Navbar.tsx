@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import MacButton from '@/components/utilities/button';
 import { 
   Menu, X, Mic, ChevronRight, ChevronDown, 
   Code, Users, Brain, Activity, Video, 
@@ -171,12 +172,14 @@ const Navbar: React.FC = () => {
 
             {/* --- Desktop CTA --- */}
             <div className="hidden md:flex items-center space-x-4">
-              <Link href="/login" className="text-sm bg-slate-900 hover:bg-slate-50 hover:text-slate-900 rounded-full cursor-pointer px-4 py-2 font-medium  hover:text-slate-900 px-2">
+              <Link href="/login" className="text-sm bg-slate-900 text-white hover:bg-slate-50 hover:text-slate-900 rounded-full cursor-pointer px-4 py-2 font-medium  hover:text-slate-900 px-2">
                 Log in
               </Link>
 
               
-              <button className="
+              <MacButton />
+              
+              {/* <button className="
                 bg-slate-900 hover:bg-black text-white 
                 px-5 py-2.5 rounded-full 
                 font-medium text-sm 
@@ -187,7 +190,7 @@ const Navbar: React.FC = () => {
               ">
                 <Sparkles size={16} />
                 <span>Start Mock Interview</span>
-              </button>
+              </button> */}
             </div>
 
             {/* --- Mobile Hamburger Button --- */}
