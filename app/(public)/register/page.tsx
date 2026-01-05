@@ -9,7 +9,7 @@ export default function RegisterPage() {
       <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
 
-          <Link href="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-black text-sm mb-6 transition-colors font-medium group">
+          <Link href="/login" className="inline-flex items-center gap-2 text-slate-500 hover:text-black text-sm mb-6 transition-colors font-medium group">
             <svg
               className="h-5 w-5 text-slate-400 group-hover:text-black transition-colors"
               fill="none"
