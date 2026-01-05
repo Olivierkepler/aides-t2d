@@ -287,14 +287,12 @@ const Navbar: React.FC = () => {
 
              {/* Mobile CTA Area */}
              <div className="px-2 mt-auto">
-                <button className="w-full bg-slate-900 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-slate-200 active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
-                  <Sparkles size={18} />
-                  Start Mock Interview
-                </button>
-                <div className="mt-4 grid grid-cols-2 gap-3 text-center">
-                   <button className="py-3 text-sm font-medium text-slate-600 hover:bg-slate-50 rounded-lg border border-slate-200">Log In</button>
-                   <button className="py-3 text-sm font-medium text-slate-600 hover:bg-slate-50 rounded-lg border border-slate-200">Sign Up</button>
-                </div>
+               
+                <Link href="/login" className="w-full bg-slate-900 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-slate-200 active:scale-[0.98] transition-transform flex items-center justify-center gap-2" >
+                Log in
+              </Link>
+            
+              
              </div>
           </div>
           
