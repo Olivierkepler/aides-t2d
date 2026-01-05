@@ -8,12 +8,24 @@ export default function LoginPage() {
       {/* ================= LEFT SIDE: LOGIN FORM & HELP ================= */}
       <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
-          
+        <Link href="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-black text-sm mb-6 transition-colors font-medium group">
+            <svg
+              className="h-5 w-5 text-slate-400 group-hover:text-black transition-colors"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to home
+          </Link>
           {/* Header */}
           <div className="mb-10">
             {/* Logo Wrapper */}
             <div className="h-12 w-12 bg-blue-50 rounded-xl border border-blue-100 flex items-center justify-center mb-6">
-              <Lock className="h-6 w-6 text-blue-600" />
+              <Lock className="h-6 w-6 text-black" />
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-slate-900">
               Logging In

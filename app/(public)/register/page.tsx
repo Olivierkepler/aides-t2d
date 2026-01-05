@@ -8,12 +8,26 @@ export default function RegisterPage() {
       {/* ================= LEFT SIDE: SIGN UP FORM ================= */}
       <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
+
+          <Link href="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-black text-sm mb-6 transition-colors font-medium group">
+            <svg
+              className="h-5 w-5 text-slate-400 group-hover:text-black transition-colors"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to login
+          </Link>
           
           {/* Header */}
           <div className="mb-10">
             {/* Icon Wrapper - Matching Login Page Style */}
             <div className="h-12 w-12 bg-blue-50 rounded-xl border border-blue-100 flex items-center justify-center mb-6">
-              <User className="h-6 w-6 text-blue-600" />
+              <User className="h-6 w-6 text-black" />
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-slate-900">
               Join the Study
@@ -113,7 +127,7 @@ export default function RegisterPage() {
                   id="consent"
                   name="consent"
                   type="checkbox"
-                  className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-600 transition-colors"
+                  className="h-4 w-4 rounded border-slate-300 cursor-pointer text-black focus:ring-black transition-colors"
                 />
               </div>
               <div className="ml-3 text-sm leading-6">
