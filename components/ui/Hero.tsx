@@ -1,92 +1,107 @@
 import React from 'react';
-import { ShieldCheck, LineChart, MessageSquare, Fingerprint } from 'lucide-react';
+import { ShieldCheck, LineChart, MessageSquare, Fingerprint, ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   studyId: string;
-  participantName?: string; // Optional: personalize if you have the data
+  participantName?: string;
 }
 
 const Hero = ({ studyId, participantName }: HeroProps) => {
   return (
-    <section className="relative pt-20 overflow-hidden bg-white ">
-      {/* Abstract Background Decoration */}
-      <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50" />
-      <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-72 h-72 bg-teal-50 rounded-full blur-3xl opacity-50" />
+    <section
+      className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-white"
+      style={{
+        backgroundImage: "url('/image_bg.png')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center 100px", // Move the image a little down
+        backgroundBlendMode: "multiply",
+      }}
+    >
+      {/* Overlays to ensure text readability while keeping the image visible */}
+      {/* <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]" /> */}
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white" /> */}
 
-      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-24 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
          
           {/* Left Column: Content */}
-          <div>
-            {/* Study ID Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-slate-100 text-slate-600 mb-8 border border-slate-200 shadow-sm">
-              <Fingerprint size={14} className="text-blue-600" />
-              <span className="text-xs font-mono font-bold tracking-wider uppercase">
-                Study ID: <span className="text-black">{studyId}</span>
+          <div className="flex flex-col items-start">
+            {/* Cluely-style Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-slate-200/50 shadow-sm mb-10">
+              <Fingerprint size={14} className="text-black" />
+              <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-500">
+                Secure Session ID: <span className="text-black font-mono">{studyId}</span>
               </span>
             </div>
 
-            <h1 className="text-4xl lg:text-5xl tracking-tight text-slate-900 leading-tight mb-6">
-              Welcome{participantName ? `, ${participantName}` : ''} to the <br />
-              <span className="text-black">
-                AIDES-T2D Study Portal
+            <h1 className="text-5xl lg:text-7xl  tracking-tight text-slate-900 leading-[1.05] mb-8">
+              Welcome{participantName ? `, ${participantName}` : ''} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">
+                AIDES-T2D Study
               </span>
             </h1>
 
-            <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-xl">
-              Thank you for joining the <span className="font-semibold text-slate-800">Artificial Intelligence–Driven Emotional Support for Type 2 Diabetes</span> study. This secure environment is designed to support your journey.
+            <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl font-light">
+              Experience the next generation of <span className="font-medium text-black underline decoration-blue-500/30 underline-offset-4">Emotional Support</span> for Type 2 Diabetes through secure, AI-driven reflections.
             </p>
 
-            {/* Quick Feature Grid */}
-            <div className="grid sm:grid-cols-3 gap-4 mb-10">
-              {[
-                { icon: MessageSquare, text: "Daily Reflections", color: "text-blue-600" },
-                { icon: ShieldCheck, text: "Personal Support", color: "text-teal-600" },
-                { icon: LineChart, text: "Track Progress", color: "text-indigo-600" },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-2 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                  <item.icon size={18} className={item.color} />
-                  <span className="text-sm font-medium text-slate-700">{item.text}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-2 bg-black cursor-pointer  hover:bg-black/50 text-white rounded-xl font-semibold shadow-lg shadow-blue-200 transition-all active:scale-95 text-center">
+            {/* Cluely Primary & Secondary Buttons */}
+            <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+              <button className="group px-10 py-4 bg-black text-white rounded-2xl font-semibold shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] transition-all active:scale-95 flex items-center justify-center gap-2">
                 Get Started
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-8 py-2 cursor-pointer bg-white border border-slate-200 hover:border-slate-300 text-slate-700 rounded-xl font-semibold transition-all hover:bg-slate-50 text-center">
+              <button className="px-10 py-4 bg-white/50 backdrop-blur-md border border-slate-200 hover:border-black text-slate-900 rounded-2xl font-semibold transition-all active:scale-95">
                 Portal Guide
               </button>
             </div>
+
+            {/* Minimalist Feature Icons */}
+            <div className="mt-16 flex gap-10">
+              {[
+                { icon: MessageSquare, label: "Daily Support" },
+                { icon: ShieldCheck, label: "Private" },
+                { icon: LineChart, label: "Insights" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 text-slate-400 hover:text-black transition-colors">
+                  <item.icon size={18} strokeWidth={1.5} />
+                  <span className="text-xs font-bold uppercase tracking-widest">{item.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Right Column: Visual Element */}
+          {/* Right Column: The "Floating Glass" UI Element */}
           <div className="hidden lg:block relative">
-            <div className="relative z-10 bg-white p-8 rounded-3xl shadow-2xl border border-slate-100 transition-transform hover:rotate-1">
-              {/* This acts as a mock UI/Identity card */}
-              <div className="flex items-center gap-4 mb-6 pb-6 border-b border-slate-100">
-                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold">
-                  {studyId.charAt(0)}
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-slate-900 uppercase">Participant Active</p>
-                  <p className="text-xs text-slate-500 tracking-wide">Encrypted Session: Secure</p>
+            <div className="relative z-10 bg-white/40 backdrop-blur-xl py-30 px-10 rounded-[40px] border border-white/60 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.12)]">
+              {/* Header inside card */}
+              <div className="flex items-center justify-between mb-12">
+                <div className="h-3 w-12 bg-black rounded-full" />
+                <div className="flex gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-slate-200" />
+                  <div className="w-2 h-2 rounded-full bg-slate-200" />
+                  <div className="w-2 h-2 rounded-full bg-blue-500" />
                 </div>
               </div>
              
-              <div className="space-y-2">
-                <div className="h-0.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                  <div className="h-full w-1/3 bg-black rounded-full" />
+              <div className="space-y-8">
+                <div className="p-6 rounded-3xl bg-white/60 border border-white shadow-sm">
+                   <div className="h-2 w-24 bg-slate-100 rounded mb-4" />
+                   <div className="h-2 w-full bg-slate-200 rounded" />
                 </div>
-                <p className="text-xs text-slate-400 italic text-center leading-relaxed">
-                  "Your reflections help the AI tailor support specific to your Type 2 Diabetes management."
-                </p>
+                
+                <div className="text-center space-y-4">
+                  <p className="text-xs text-slate-400 font-mono tracking-tighter uppercase">Encryption Status: Active</p>
+                  <p className="text-[13px] text-slate-500 italic leading-relaxed px-4">
+                    "Your data is processed locally to ensure your privacy remains the top priority."
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Subtle background glow for the card */}
-            <div className="absolute inset-0 bg-black blur-[80px] opacity-20 -z-10 animate-pulse" />
+            {/* Soft decorative glow behind the card */}
+            <div className="absolute -inset-4 bg-gradient-to-tr from-blue-100/20 to-indigo-100/20 blur-3xl -z-10 rounded-[50px]" />
           </div>
 
         </div>

@@ -3,6 +3,7 @@ import Footer from "@/components/ui/Footer";
 import Hero from "@/components/ui/Hero";
 import FourWays from "@/components/ui/FourWays";
 import FAQ from "@/components/ui/FAQ";
+import MacButtonBlack from "@/components/utilities/button";
 
 export default function Home() {
   return (
