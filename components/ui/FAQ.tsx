@@ -7,31 +7,30 @@ const FAQ = () => {
   // 1. DATA FROM THE IMAGE
   const faqs = [
     {
-      question: "Why real-time vs. a regular AI notetaker?",
-      answer: "Unlike regular AI notetakers like Otter or Granola that work after your meeting ends, Cluely provides real-time meeting intelligence during your calls. While other AI meeting assistants create meeting summaries afterward, Cluely helps you answer technical questions, handle objections, and perform better during high-stakes conversations."
+      question: "How is AIDES-T2D different from other diabetes apps?",
+      answer: "Unlike standard apps that focus primarily on tracking blood glucose numbers or calories, AIDES-T2D focuses on the emotional side of living with diabetes. It combines daily reflection with Stampley, an AI companion designed to provide immediate empathy and coping strategies for diabetes distress."
     },
     {
-      question: "Who is Cluely for?",
-      answer: "Cluely is designed for sales professionals, founders, and customer success managers who need instant access to information during high-pressure meetings."
+      question: "Who is eligible to use this portal?",
+      answer: "The AIDES-T2D portal is exclusively for participants currently enrolled in the PCRG clinical research study at UMass Boston. You must have a valid, active Study ID provided by the research coordinator to log in."
     },
     {
-      question: "Is Cluely free?",
-      answer: "We offer a generous free tier that includes essential features. For power users needing unlimited real-time assistance, we offer a Pro plan."
+      question: "Is there a cost to use Stampley?",
+      answer: "No. Participation in the study and access to the AIDES-T2D dashboard—including the Stampley AI companion—is completely free for all enrolled participants."
     },
     {
-      question: "How is it undetectable in meetings?",
-      answer: "Cluely runs locally on your system and captures audio directly from your output device. It does not join the call as a bot, so no one else knows it's there."
+      question: "Is my data private and secure?",
+      answer: "Your privacy is paramount. We use clinical-grade encryption to protect your conversations and daily check-ins. Your personal identity is separated from your data using your Study ID, ensuring your reflections remain confidential."
     },
     {
-      question: "What languages and apps are supported?",
-      answer: "We currently support Zoom, Google Meet, and Microsoft Teams in English, with multi-language support coming soon."
+      question: "Do I need to download an app?",
+      answer: "No, AIDES-T2D is a secure web-based platform. You can access it directly through the browser on your smartphone, tablet, or computer without downloading anything from an app store."
     },
     {
-      question: "Can I talk to customer support?",
-      answer: "Yes, our support team is available via email and live chat to help you with any setup or technical questions."
+      question: "Who do I contact for help?",
+      answer: "For technical issues with the website, please email our tech support. For questions regarding the study protocol, payments, or your rights as a participant, please contact the Study Coordinator listed in your welcome email."
     }
   ];
-
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First item open by default like the image
 
   const toggleFAQ = (index: number) => {

@@ -1,34 +1,33 @@
-import React from 'react';
-import { Apple, Sparkles } from 'lucide-react';
+// import React from 'react';
 
-const MacButtonBlack = () => {
-  return (
-    <button className="
-      /* Layout & Typography */
-      flex items-center gap-3 px-4 py-2
-      text-white  font-medium
-      
-      /* Background & Shape (Dark Gradient) */
-      bg-gradient-to-b from-[#333333] to-[#000000]
-      rounded-[24px]
-      
-      /* Borders & Depth (Subtle top highlight) */
-      border-t border-white/10
-      
-      /* Shadow (Neutral deep shadow) */
-      shadow-[0_10px_30px_rgba(0,0,0,0.4)]
-      
-      /* Interaction */
-      transition-all duration-200
-      hover:from-[#444444] hover:to-[#111111]
-      active:scale-95
-      cursor-pointer
-    ">
-      
-      <Sparkles size={16} />
-      <span>Start Mock Interview</span>
-    </button>
-  );
-};
+// interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+//   variant?: 'primary' | 'secondary' | 'ghost';
+//   fullWidth?: boolean;
+// }
 
-export default MacButtonBlack;
+// export const Button: React.FC<ButtonProps> = ({ 
+//   children, 
+//   variant = 'primary', 
+//   fullWidth = false, 
+//   className = '', 
+//   ...props 
+// }) => {
+//   const baseStyles = "px-6 py-3 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+  
+//   const variants = {
+//     primary: "bg-teal-700 hover:bg-teal-800 text-white shadow-lg shadow-teal-700/20 focus:ring-teal-500",
+//     secondary: "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 shadow-sm focus:ring-slate-400",
+//     ghost: "bg-transparent text-slate-600 hover:text-teal-700 hover:bg-teal-50/50"
+//   };
+
+//   const widthClass = fullWidth ? "w-full" : "";
+
+//   return (
+//     <button 
+//       className={`${baseStyles} ${variants[variant]} ${widthClass} ${className}`}
+//       {...props}
+//     >
+//       {children}
+//     </button>
+//   );
+// };
